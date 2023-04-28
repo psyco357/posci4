@@ -1,0 +1,40 @@
+CRITICAL - 2023-04-12 18:05:15 --> Undefined variable: menu
+in APPPATH\Views\users\dasboardUser.php on line 28.
+ 1 APPPATH\Views\users\dasboardUser.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: menu', 'APPPATH\\Views\\users\\dasboardUser.php', 28, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\dasboardUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('users/dasboardUser', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('users/dasboardUser')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->dasboardu()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-12 18:25:23 --> Undefined variable: menu
+in APPPATH\Views\users\dasboardUser.php on line 28.
+ 1 APPPATH\Views\users\dasboardUser.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: menu', 'APPPATH\\Views\\users\\dasboardUser.php', 28, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\dasboardUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('users/dasboardUser', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('users/dasboardUser')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->dasboardu()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-12 18:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-12 18:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-12 18:28:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-12 18:28:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-04-12 21:08:53 --> Undefined variable: menu
+in APPPATH\Views\users\camera.php on line 145.
+ 1 APPPATH\Views\users\camera.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: menu', 'APPPATH\\Views\\users\\camera.php', 145, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\camera.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('users/camera', [], true)
+ 5 APPPATH\Controllers\Users\Dasboardu.php(50): view('users/camera', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\users\Dasboardu->camera()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\users\Dasboardu))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

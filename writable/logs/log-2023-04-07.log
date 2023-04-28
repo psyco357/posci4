@@ -1,0 +1,635 @@
+CRITICAL - 2023-04-07 13:19:31 --> Undefined variable: menu
+in APPPATH\Views\users\dasboardUser.php on line 28.
+ 1 APPPATH\Views\users\dasboardUser.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: menu', 'APPPATH\\Views\\users\\dasboardUser.php', 28, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\dasboardUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('users/dasboardUser', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('users/dasboardUser')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->dasboardu()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-07 13:19:47 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'absen' in C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'absen', 3306, '', 0)
+#1 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\latihan\absensi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\latihan\absensi\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\latihan\absensi\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\latihan\absensi\app\Controllers\Users\Dasboardu.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(906): App\Controllers\users\Dasboardu->__construct()
+#8 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#9 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\latihan\absensi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\latihan\absensi\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\l...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'absen' in C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\latihan\absensi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\wamp64\www\latihan\absensi\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\latihan\absensi\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\wamp64\www\latihan\absensi\app\Controllers\Users\Dasboardu.php(18): CodeIgniter\BaseModel->findAll()
+#6 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(906): App\Controllers\users\Dasboardu->__construct()
+#7 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#8 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\latihan\absensi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\latihan\absensi\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\l...')
+#11 {main}
+CRITICAL - 2023-04-07 13:19:47 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'absen'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `status` = :status:
+AND `target` = :target:
+ORDER BY `kdmenu` ASC', [...], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Users\Dasboardu.php(18): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\users\Dasboardu->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-07 13:22:03 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'absen' in C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'absen', 3306, '', 0)
+#1 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\latihan\absensi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\latihan\absensi\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\latihan\absensi\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\latihan\absensi\app\Controllers\Users\Dasboardu.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(906): App\Controllers\users\Dasboardu->__construct()
+#8 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#9 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\latihan\absensi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\latihan\absensi\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\l...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'absen' in C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\latihan\absensi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\wamp64\www\latihan\absensi\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\latihan\absensi\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\wamp64\www\latihan\absensi\app\Controllers\Users\Dasboardu.php(18): CodeIgniter\BaseModel->findAll()
+#6 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(906): App\Controllers\users\Dasboardu->__construct()
+#7 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#8 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\latihan\absensi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\latihan\absensi\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\l...')
+#11 {main}
+CRITICAL - 2023-04-07 13:22:03 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'absen'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `status` = :status:
+AND `target` = :target:
+ORDER BY `kdmenu` ASC', [...], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Users\Dasboardu.php(18): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\users\Dasboardu->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-07 13:22:04 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'absen' in C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'absen', 3306, '', 0)
+#1 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\latihan\absensi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\latihan\absensi\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\latihan\absensi\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\latihan\absensi\app\Controllers\Users\Dasboardu.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(906): App\Controllers\users\Dasboardu->__construct()
+#8 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#9 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\latihan\absensi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\latihan\absensi\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\l...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'absen' in C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\latihan\absensi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\wamp64\www\latihan\absensi\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\latihan\absensi\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\wamp64\www\latihan\absensi\app\Controllers\Users\Dasboardu.php(18): CodeIgniter\BaseModel->findAll()
+#6 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(906): App\Controllers\users\Dasboardu->__construct()
+#7 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#8 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\latihan\absensi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\latihan\absensi\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\l...')
+#11 {main}
+CRITICAL - 2023-04-07 13:22:04 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'absen'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `status` = :status:
+AND `target` = :target:
+ORDER BY `kdmenu` ASC', [...], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Users\Dasboardu.php(18): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\users\Dasboardu->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-07 13:22:15 --> mysqli_sql_exception: Unknown column 'kdmenu' in 'order clause' in C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\latihan\absensi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\latihan\absensi\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\latihan\absensi\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\latihan\absensi\app\Controllers\Users\Dasboardu.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(906): App\Controllers\users\Dasboardu->__construct()
+#8 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#9 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\latihan\absensi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\latihan\absensi\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\l...')
+#12 {main}
+CRITICAL - 2023-04-07 13:22:15 --> Unknown column 'kdmenu' in 'order clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `status` = :status:
+AND `target` = :target:
+ORDER BY `kdmenu` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Users\Dasboardu.php(18): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\users\Dasboardu->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 13:24:20 --> Undefined index: warna
+in APPPATH\Views\users\dasboardUser.php on line 31.
+ 1 APPPATH\Views\users\dasboardUser.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: warna', 'APPPATH\\Views\\users\\dasboardUser.php', 31, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\dasboardUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('users/dasboardUser', [], true)
+ 5 APPPATH\Controllers\Users\Dasboardu.php(31): view('users/dasboardUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\users\Dasboardu->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\users\Dasboardu))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 13:25:05 --> Undefined index: titlemenu
+in APPPATH\Views\users\dasboardUser.php on line 35.
+ 1 APPPATH\Views\users\dasboardUser.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: titlemenu', 'APPPATH\\Views\\users\\dasboardUser.php', 35, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\dasboardUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('users/dasboardUser', [], true)
+ 5 APPPATH\Controllers\Users\Dasboardu.php(31): view('users/dasboardUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\users\Dasboardu->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\users\Dasboardu))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 14:17:54 --> Call to a member function where() on null
+in APPPATH\Models\users\MenuModel.php on line 21.
+ 1 APPPATH\Controllers\Superadmin\Dasboards.php(22): App\Models\users\MenuModel->getSuperabsen()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 14:18:50 --> Call to a member function where() on null
+in APPPATH\Models\users\MenuModel.php on line 21.
+ 1 APPPATH\Controllers\Superadmin\Dasboards.php(22): App\Models\users\MenuModel->getSuperabsen()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 14:32:06 --> Undefined variable: data
+in APPPATH\Views\template\superadmin\sitebarsuper.php on line 76.
+ 1 APPPATH\Views\template\superadmin\sitebarsuper.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Views\\template\\superadmin\\sitebarsuper.php', 76, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\superadmin\\sitebarsuper.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('template/superadmin/sitebarsuper', null, true)
+ 5 APPPATH\Views\template\superadmin\layoutsuper.php(15): CodeIgniter\View\View->include('template/superadmin/sitebarsuper')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\superadmin\\layoutsuper.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('template/superadmin/layoutsuper', [], true)
+ 9 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('superadmin/dasboardsuper', [], true)
+10 APPPATH\Controllers\Superadmin\Dasboards.php(29): view('superadmin/dasboardsuper', [...])
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->index()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 14:40:36 --> Undefined variable: bawah
+in APPPATH\Controllers\Superadmin\Dasboards.php on line 37.
+ 1 APPPATH\Controllers\Superadmin\Dasboards.php(37): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: bawah', 'APPPATH\\Controllers\\Superadmin\\Dasboards.php', 37, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->tambahmenu()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 14:44:22 --> Undefined variable: menu
+in APPPATH\Views\template\superadmin\sitebarsuper.php on line 76.
+ 1 APPPATH\Views\template\superadmin\sitebarsuper.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: menu', 'APPPATH\\Views\\template\\superadmin\\sitebarsuper.php', 76, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\superadmin\\sitebarsuper.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('template/superadmin/sitebarsuper', null, true)
+ 5 APPPATH\Views\template\superadmin\layoutsuper.php(15): CodeIgniter\View\View->include('template/superadmin/sitebarsuper')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\superadmin\\layoutsuper.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('template/superadmin/layoutsuper', [], true)
+ 9 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('superadmin/tambahsite', [], true)
+10 APPPATH\Controllers\Superadmin\Dasboards.php(39): view('superadmin/tambahsite', [...])
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->tambahmenu()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 14:49:25 --> Undefined variable: menu
+in APPPATH\Views\users\dasboardUser.php on line 28.
+ 1 APPPATH\Views\users\dasboardUser.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: menu', 'APPPATH\\Views\\users\\dasboardUser.php', 28, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\dasboardUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('users/dasboardUser', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('users/dasboardUser')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->dasboardu()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 14:57:14 --> Undefined index: title
+in APPPATH\Views\superadmin\tambahsite.php on line 13.
+ 1 APPPATH\Views\superadmin\tambahsite.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: title', 'APPPATH\\Views\\superadmin\\tambahsite.php', 13, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\tambahsite.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('superadmin/tambahsite', [], true)
+ 5 APPPATH\Controllers\Superadmin\Dasboards.php(39): view('superadmin/tambahsite', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->tambahmenu()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 14:57:49 --> Array to string conversion
+in APPPATH\Views\superadmin\tambahsite.php on line 13.
+ 1 APPPATH\Views\superadmin\tambahsite.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\superadmin\\tambahsite.php', 13, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\tambahsite.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('superadmin/tambahsite', [], true)
+ 5 APPPATH\Controllers\Superadmin\Dasboards.php(39): view('superadmin/tambahsite', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->tambahmenu()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 14:58:12 --> Array to string conversion
+in APPPATH\Views\superadmin\tambahsite.php on line 13.
+ 1 APPPATH\Views\superadmin\tambahsite.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\superadmin\\tambahsite.php', 13, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\tambahsite.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('superadmin/tambahsite', [], true)
+ 5 APPPATH\Controllers\Superadmin\Dasboards.php(39): view('superadmin/tambahsite', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->tambahmenu()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 19:41:58 --> Invalid file: "modal/modaltambah.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modal/modaltambah.php')
+ 2 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('modal/modaltambah', null, true)
+ 3 APPPATH\Views\superadmin\tambahsite.php(28): CodeIgniter\View\View->include('modal/modaltambah')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\tambahsite.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('superadmin/tambahsite', [], true)
+ 7 APPPATH\Controllers\Superadmin\Dasboards.php(37): view('superadmin/tambahsite', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->tambahmenu()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-07 19:59:20 --> mysqli_sql_exception: Column 'level' in where clause is ambiguous in C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\latihan\absensi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\latihan\absensi\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\latihan\absensi\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\latihan\absensi\app\Models\super\MenuModel.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\latihan\absensi\app\Controllers\Superadmin\Dasboards.php(17): App\Models\super\MenuModel->getSuperabsen()
+#8 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(906): App\Controllers\Superadmin\Dasboards->__construct()
+#9 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#10 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\latihan\absensi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\latihan\absensi\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\l...')
+#13 {main}
+CRITICAL - 2023-04-07 19:59:20 --> Column 'level' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`, `masterlevel`, `masterapp`
+WHERE `status` = :status:
+AND `target` = :target:
+AND `app` = :app:
+AND `level` = :level:
+ORDER BY `urut` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\super\MenuModel.php(21): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Superadmin\Dasboards.php(17): App\Models\super\MenuModel->getSuperabsen()
+ 6 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Superadmin\Dasboards->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-07 20:00:26 --> mysqli_sql_exception: Column 'level' in where clause is ambiguous in C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\latihan\absensi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\latihan\absensi\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\latihan\absensi\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\latihan\absensi\app\Models\super\MenuModel.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\latihan\absensi\app\Controllers\Superadmin\Dasboards.php(17): App\Models\super\MenuModel->getSuperabsen()
+#8 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(906): App\Controllers\Superadmin\Dasboards->__construct()
+#9 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#10 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\latihan\absensi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\latihan\absensi\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\l...')
+#13 {main}
+CRITICAL - 2023-04-07 20:00:26 --> Column 'level' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`, `masterlevel`, `masterapp`
+WHERE `status` = :status:
+AND `target` = :target:
+AND `app` = :app:
+AND `level` = :level:
+ORDER BY `urut` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\super\MenuModel.php(21): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Superadmin\Dasboards.php(17): App\Models\super\MenuModel->getSuperabsen()
+ 6 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Superadmin\Dasboards->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-07 20:04:26 --> mysqli_sql_exception: Column 'level' in where clause is ambiguous in C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\latihan\absensi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\latihan\absensi\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\latihan\absensi\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\latihan\absensi\app\Models\super\MenuModel.php(21): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\latihan\absensi\app\Controllers\Superadmin\Dasboards.php(17): App\Models\super\MenuModel->getSuperabsen()
+#8 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(906): App\Controllers\Superadmin\Dasboards->__construct()
+#9 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#10 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\latihan\absensi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\latihan\absensi\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\l...')
+#13 {main}
+CRITICAL - 2023-04-07 20:04:26 --> Column 'level' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`, `masterlevel`, `masterapp`
+WHERE `status` = :status:
+AND `target` = :target:
+AND `app` = :app:
+AND `level` = :level:
+ORDER BY `urut` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\super\MenuModel.php(21): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Superadmin\Dasboards.php(17): App\Models\super\MenuModel->getSuperabsen()
+ 6 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Superadmin\Dasboards->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 20:09:55 --> Undefined variable: levela
+in APPPATH\Controllers\Superadmin\Dasboards.php on line 34.
+ 1 APPPATH\Controllers\Superadmin\Dasboards.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: levela', 'APPPATH\\Controllers\\Superadmin\\Dasboards.php', 34, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->tambahmenu()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 20:11:41 --> Array to string conversion
+in APPPATH\Views\superadmin\modal\modaltambah.php on line 40.
+ 1 APPPATH\Views\superadmin\modal\modaltambah.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\superadmin\\modal\\modaltambah.php', 40, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\modal\\modaltambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('superadmin/modal/modaltambah', null, true)
+ 5 APPPATH\Views\superadmin\tambahsite.php(25): CodeIgniter\View\View->include('superadmin/modal/modaltambah')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\tambahsite.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('superadmin/tambahsite', [], true)
+ 9 APPPATH\Controllers\Superadmin\Dasboards.php(40): view('superadmin/tambahsite', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->tambahmenu()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 20:13:48 --> Array to string conversion
+in APPPATH\Views\superadmin\modal\modaltambah.php on line 40.
+ 1 APPPATH\Views\superadmin\modal\modaltambah.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\superadmin\\modal\\modaltambah.php', 40, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\modal\\modaltambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('superadmin/modal/modaltambah', null, true)
+ 5 APPPATH\Views\superadmin\tambahsite.php(25): CodeIgniter\View\View->include('superadmin/modal/modaltambah')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\tambahsite.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('superadmin/tambahsite', [], true)
+ 9 APPPATH\Controllers\Superadmin\Dasboards.php(40): view('superadmin/tambahsite', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->tambahmenu()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 20:31:21 --> Undefined variable: data
+in APPPATH\Views\superadmin\modal\modaltambah.php on line 70.
+ 1 APPPATH\Views\superadmin\modal\modaltambah.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Views\\superadmin\\modal\\modaltambah.php', 70, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\modal\\modaltambah.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('superadmin/modal/modaltambah', null, true)
+ 5 APPPATH\Views\superadmin\tambahsite.php(25): CodeIgniter\View\View->include('superadmin/modal/modaltambah')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\tambahsite.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('superadmin/tambahsite', [], true)
+ 9 APPPATH\Controllers\Superadmin\Dasboards.php(42): view('superadmin/tambahsite', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->tambahmenu()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 20:34:16 --> Undefined variable: data
+in APPPATH\Views\superadmin\modal\modaledit.php on line 2.
+ 1 APPPATH\Views\superadmin\modal\modaledit.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Views\\superadmin\\modal\\modaledit.php', 2, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\modal\\modaledit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('superadmin/modal/modaledit', null, true)
+ 5 APPPATH\Views\superadmin\tambahsite.php(56): CodeIgniter\View\View->include('superadmin/modal/modaledit')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\superadmin\\tambahsite.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('superadmin/tambahsite', [], true)
+ 9 APPPATH\Controllers\Superadmin\Dasboards.php(42): view('superadmin/tambahsite', [...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->tambahmenu()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 21:23:13 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329, [...])
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `menu`
+WHERE `status` = :status:
+AND `level` = :level:
+ORDER BY `urut` ASC', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `status` = :status:
+AND `level` = :level:
+ORDER BY `urut` ASC', [...], false)
+ 7 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 9 APPPATH\Models\super\MenuModel.php(31): CodeIgniter\BaseModel->findAll()
+10 APPPATH\Controllers\Superadmin\Dasboards.php(22): App\Models\super\MenuModel->getIdMax([...])
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->index()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-07 21:23:43 --> mysqli_sql_exception: Operand should contain 1 column(s) in C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\latihan\absensi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\latihan\absensi\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\latihan\absensi\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\latihan\absensi\app\Models\super\MenuModel.php(31): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\latihan\absensi\app\Controllers\Superadmin\Dasboards.php(22): App\Models\super\MenuModel->getIdMax(Array)
+#8 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->index()
+#9 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+#10 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\latihan\absensi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\latihan\absensi\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\l...')
+#13 {main}
+CRITICAL - 2023-04-07 21:23:43 --> Operand should contain 1 column(s)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `status` = :status:
+AND `level` = :level:
+ORDER BY `urut` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\super\MenuModel.php(31): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Superadmin\Dasboards.php(22): App\Models\super\MenuModel->getIdMax([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 21:24:17 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329, [...])
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT *
+FROM `menu`
+WHERE `level` = :level:
+ORDER BY `urut` ASC', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `level` = :level:
+ORDER BY `urut` ASC', [...], false)
+ 7 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 9 APPPATH\Models\super\MenuModel.php(30): CodeIgniter\BaseModel->findAll()
+10 APPPATH\Controllers\Superadmin\Dasboards.php(22): App\Models\super\MenuModel->getIdMax([...])
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->index()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 21:29:33 --> Call to undefined method App\Models\super\MenuModel::max
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\super\MenuModel.php(30): CodeIgniter\Model->__call('max', [...])
+ 2 APPPATH\Controllers\Superadmin\Dasboards.php(22): App\Models\super\MenuModel->getIdMax('1')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-07 21:44:34 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329, [...])
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT MAX(`kdmenu`) AS `kdmenu`
+FROM `menu`
+WHERE `level` = :level:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT MAX(`kdmenu`) AS `kdmenu`
+FROM `menu`
+WHERE `level` = :level:', [...], false)
+ 7 SYSTEMPATH\Model.php(840): CodeIgniter\Database\BaseBuilder->get()
+ 8 APPPATH\Models\super\MenuModel.php(30): CodeIgniter\Model->__call('get', [])
+ 9 APPPATH\Controllers\Superadmin\Dasboards.php(51): App\Models\super\MenuModel->getIdMax([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Superadmin\Dasboards->addmenu()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Dasboards))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+INFO - 2023-04-07 21:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 21:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 21:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 21:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 21:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 21:58:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 21:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 21:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 21:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 21:58:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 21:58:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 22:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 22:02:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 22:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 22:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 22:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 22:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 22:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 22:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 22:08:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 22:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 22:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 22:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 22:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-04-07 22:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

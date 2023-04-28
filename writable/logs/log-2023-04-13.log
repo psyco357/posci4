@@ -1,0 +1,258 @@
+CRITICAL - 2023-04-13 20:50:35 --> Undefined variable: menu
+in APPPATH\Views\users\dasboardUser.php on line 28.
+ 1 APPPATH\Views\users\dasboardUser.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: menu', 'APPPATH\\Views\\users\\dasboardUser.php', 28, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\users\\dasboardUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('users/dasboardUser', [], true)
+ 5 APPPATH\Controllers\Pages.php(14): view('users/dasboardUser')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Pages->dasboardu()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 22:23:55 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 882.
+ 1 SYSTEMPATH\Model.php(642): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(832): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Admin\Profil.php(18): CodeIgniter\Model->__call('Getprofil', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-04-13 22:25:28 --> mysqli_sql_exception: Unknown column 'c.kduser' in 'on clause' in C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\latihan\absensi\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\latihan\absensi\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\latihan\absensi\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\latihan\absensi\app\Models\admin\ModelGet.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\latihan\absensi\app\Controllers\Admin\Profil.php(18): App\Models\admin\ModelGet->GetProfil()
+#6 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+#7 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+#8 C:\wamp64\www\latihan\absensi\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\latihan\absensi\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\latihan\absensi\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\l...')
+#11 {main}
+CRITICAL - 2023-04-13 22:25:28 --> Unknown column 'c.kduser' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `transuser` `a`
+JOIN `licensi` `b` ON `b`.`kdlicensi`=`a`.`kdlicensi`
+JOIN `user` `c` ON `c`.`kduser`=`a`.`kduser`', [], false)
+ 2 APPPATH\Models\admin\ModelGet.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin\Profil.php(18): App\Models\admin\ModelGet->GetProfil()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 22:27:40 --> Undefined variable: menu
+in APPPATH\Views\template\sitebar.php on line 76.
+ 1 APPPATH\Views\template\sitebar.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: menu', 'APPPATH\\Views\\template\\sitebar.php', 76, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\sitebar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('template/sitebar', null, true)
+ 5 APPPATH\Views\template\layoutadmin.php(15): CodeIgniter\View\View->include('template/sitebar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\layoutadmin.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('template/layoutadmin', [], true)
+ 9 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/profil', [], true)
+10 APPPATH\Controllers\Admin\Profil.php(21): view('admin/profil', [...])
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 22:28:21 --> Undefined variable: menu
+in APPPATH\Views\template\sitebar.php on line 76.
+ 1 APPPATH\Views\template\sitebar.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: menu', 'APPPATH\\Views\\template\\sitebar.php', 76, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\sitebar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(431): CodeIgniter\View\View->render('template/sitebar', null, true)
+ 5 APPPATH\Views\template\layoutadmin.php(15): CodeIgniter\View\View->include('template/sitebar')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\layoutadmin.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('template/layoutadmin', [], true)
+ 9 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/profil', [], true)
+10 APPPATH\Controllers\Admin\Profil.php(21): view('admin/profil', [...])
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 22:37:26 --> Undefined index: title
+in APPPATH\Views\template\layoutadmin.php on line 25.
+ 1 APPPATH\Views\template\layoutadmin.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: title', 'APPPATH\\Views\\template\\layoutadmin.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\layoutadmin.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('template/layoutadmin', [], true)
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/profil', [], true)
+ 6 APPPATH\Controllers\Admin\Profil.php(32): view('admin/profil', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 22:38:49 --> Undefined index: title
+in APPPATH\Views\template\layoutadmin.php on line 25.
+ 1 APPPATH\Views\template\layoutadmin.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: title', 'APPPATH\\Views\\template\\layoutadmin.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\layoutadmin.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('template/layoutadmin', [], true)
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/profil', [], true)
+ 6 APPPATH\Controllers\Admin\Profil.php(32): view('admin/profil', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 22:39:02 --> Array to string conversion
+in APPPATH\Views\template\layoutadmin.php on line 25.
+ 1 APPPATH\Views\template\layoutadmin.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\template\\layoutadmin.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\layoutadmin.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('template/layoutadmin', [], true)
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/profil', [], true)
+ 6 APPPATH\Controllers\Admin\Profil.php(32): view('admin/profil', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 22:39:39 --> Undefined index: title
+in APPPATH\Views\template\layoutadmin.php on line 25.
+ 1 APPPATH\Views\template\layoutadmin.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: title', 'APPPATH\\Views\\template\\layoutadmin.php', 25, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\layoutadmin.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('template/layoutadmin', [], true)
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/profil', [], true)
+ 6 APPPATH\Controllers\Admin\Profil.php(32): view('admin/profil', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 22:49:09 --> Undefined property: stdClass::$namaperusahaan
+in APPPATH\Views\admin\profil.php on line 21.
+ 1 APPPATH\Views\admin\profil.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$namaperusahaan', 'APPPATH\\Views\\admin\\profil.php', 21, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\profil.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/profil', [], true)
+ 5 APPPATH\Controllers\Admin\Profil.php(32): view('admin/profil', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 22:49:45 --> Cannot use object of type stdClass as array
+in APPPATH\Views\admin\profil.php on line 21.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/profil', [], true)
+ 4 APPPATH\Controllers\Admin\Profil.php(32): view('admin/profil', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 22:57:15 --> Trying to get property 'namaperusahaan' of non-object
+in APPPATH\Views\admin\profil.php on line 22.
+ 1 APPPATH\Views\admin\profil.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'namaperusahaan\' of non-object', 'APPPATH\\Views\\admin\\profil.php', 22, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\profil.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/profil', [], true)
+ 5 APPPATH\Controllers\Admin\Profil.php(32): view('admin/profil', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 22:57:47 --> Trying to get property 'namaperusahaan' of non-object
+in APPPATH\Controllers\Admin\Profil.php on line 27.
+ 1 APPPATH\Controllers\Admin\Profil.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'namaperusahaan\' of non-object', 'APPPATH\\Controllers\\Admin\\Profil.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 22:57:59 --> Trying to get property 'namaperusahaan' of non-object
+in APPPATH\Controllers\Admin\Profil.php on line 27.
+ 1 APPPATH\Controllers\Admin\Profil.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'namaperusahaan\' of non-object', 'APPPATH\\Controllers\\Admin\\Profil.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 22:58:02 --> Trying to get property 'namaperusahaan' of non-object
+in APPPATH\Controllers\Admin\Profil.php on line 27.
+ 1 APPPATH\Controllers\Admin\Profil.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'namaperusahaan\' of non-object', 'APPPATH\\Controllers\\Admin\\Profil.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 22:59:02 --> Trying to get property 'namaperusahaan' of non-object
+in APPPATH\Controllers\Admin\Profil.php on line 27.
+ 1 APPPATH\Controllers\Admin\Profil.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'namaperusahaan\' of non-object', 'APPPATH\\Controllers\\Admin\\Profil.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 23:01:22 --> Trying to get property 'namaperusahaan' of non-object
+in APPPATH\Controllers\Admin\Profil.php on line 27.
+ 1 APPPATH\Controllers\Admin\Profil.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'namaperusahaan\' of non-object', 'APPPATH\\Controllers\\Admin\\Profil.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 23:02:12 --> Array to string conversion
+in APPPATH\Controllers\Admin\Profil.php on line 28.
+ 1 APPPATH\Controllers\Admin\Profil.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Admin\\Profil.php', 28, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 23:03:20 --> Array to string conversion
+in APPPATH\Controllers\Admin\Profil.php on line 28.
+ 1 APPPATH\Controllers\Admin\Profil.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Admin\\Profil.php', 28, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 23:03:30 --> Array to string conversion
+in APPPATH\Controllers\Admin\Profil.php on line 28.
+ 1 APPPATH\Controllers\Admin\Profil.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Admin\\Profil.php', 28, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 23:08:15 --> Trying to get property 'namaperusahaan' of non-object
+in APPPATH\Controllers\Admin\Profil.php on line 28.
+ 1 APPPATH\Controllers\Admin\Profil.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'namaperusahaan\' of non-object', 'APPPATH\\Controllers\\Admin\\Profil.php', 28, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 23:08:27 --> Trying to get property 'namaperusahaan' of non-object
+in APPPATH\Controllers\Admin\Profil.php on line 28.
+ 1 APPPATH\Controllers\Admin\Profil.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'namaperusahaan\' of non-object', 'APPPATH\\Controllers\\Admin\\Profil.php', 28, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 23:08:45 --> Trying to get property 'namaperusahaan' of non-object
+in APPPATH\Controllers\Admin\Profil.php on line 28.
+ 1 APPPATH\Controllers\Admin\Profil.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'namaperusahaan\' of non-object', 'APPPATH\\Controllers\\Admin\\Profil.php', 28, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Profil->profil()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Profil))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
